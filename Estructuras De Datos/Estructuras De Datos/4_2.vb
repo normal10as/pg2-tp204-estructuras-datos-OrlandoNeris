@@ -11,7 +11,7 @@
 
     Sub main()
 
-        Dim CodProducto = New UShort() {1, 2, 4, 8}
+        Dim CodProducto = New UShort() {0, 1, 2, 3, 4}
         Dim NomProducto = New String() {"Leche", "Pan", "Papa", "Yerba"}
         Dim PreciUnit = New Single() {1.4, 2, 4.3, 8.1}
         Dim TotalGeneral As Single = 0
@@ -19,6 +19,7 @@
         Dim opcion As Integer
 
         Do
+            opcion = ValidarCodigo(CodProducto)
             Dim cantidad As UShort
 
 
@@ -36,16 +37,28 @@
                     Console.WriteLine("Total General: " & TotalGeneral)
                 End If
             Next
-            Console.WriteLine("Codigo Inexistente... Intente de nuevo")
-        Loop Until (True)
+        Loop While (True)
 
+        Console.WriteLine("Total De la Compra: " & TotalGeneral)
         Console.ReadKey()
 
     End Sub
 
-    Function ValidarCodigo(ByRef value As UShort)
-        Console.Write("Ingrese Codigo de Producto: ")
-        value = Console.ReadLine
+    Function ValidarCodigo(listadecodigos() As UShort)
+
         Do
+            Console.Write("Ingrese Codigo de Producto: ")
+            Dim value As Integer = Console.ReadLine
+
+            For Each codigo As Integer In listadecodigos
+                If codigo = value Then
+                    Return value
+                End If
+            Next
+            Console.WriteLine("Codigo Erroneo, Ingreselo de nuevo...")
+        Loop While (True)
+
     End Function
+
+
 End Module

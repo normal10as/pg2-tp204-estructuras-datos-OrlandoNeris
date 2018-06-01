@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="4_1.vb" />
     <Compile Include="4_2.vb" />
+    <Compile Include="4_3.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

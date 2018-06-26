@@ -22,10 +22,10 @@
             opcion = ValidarCodigo(CodProducto)
             Dim cantidad As UShort
 
-
             If opcion = 0 Then
                 Exit Do
             End If
+
             For Each codigo As Integer In CodProducto
                 If codigo = opcion Then
                     Console.WriteLine("Descripcion: " & NomProducto(opcion))

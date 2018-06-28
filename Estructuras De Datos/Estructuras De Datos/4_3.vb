@@ -59,8 +59,21 @@
             Console.WriteLine()
         Next
 
+        Console.WriteLine()
+
+        MejoresAlumnos(NombresAlumnos, NotasAlumnos, MejorNota, cantalu)
+
         Console.ReadKey()
 
+    End Sub
+
+    Private Sub MejoresAlumnos(Nombres() As String, Notas(,) As Single, mejornota As Single, dimension As Byte)
+        Console.WriteLine("El/los Alumno/s con Mejor Promedio ")
+        For i = 0 To Nombres.Length - 1
+            If Promedio(Notas, i, dimension) = mejornota Then
+                Console.WriteLine(Nombres(i))
+            End If
+        Next
     End Sub
 
     Private Sub CargarDatos(ByRef NombresAlumnos() As String, cantalu As Byte, ByRef Matriz(,) As Single)
@@ -117,7 +130,6 @@
 
     End Sub
 
-
     Private Function ValidarNombres(ByVal vector() As String, Nombre As String) As Boolean
 
         If Nombre <> "" Then
@@ -153,7 +165,5 @@
         End If
 
     End Function
-
-
 
 End Module

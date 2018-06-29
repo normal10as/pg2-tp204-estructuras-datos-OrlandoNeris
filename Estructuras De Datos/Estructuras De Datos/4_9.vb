@@ -12,7 +12,7 @@
 
     Sub main()
 
-        Dim Clientes As New Queue
+        Dim Clientes As New Queue(Of String)
         Dim bandera As Byte = 1
 
         While bandera <> 3

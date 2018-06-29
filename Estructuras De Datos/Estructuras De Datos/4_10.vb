@@ -4,7 +4,7 @@
     '        accedida en todo el módulo. Con un menú permite efectuar 2 acciones: ingresar nombres a la
     '        colección desde teclado y la segunda permita extraerlo y mostrarlo en la pantalla. El programa
     '        debe finalizar cuando se quitan todos los elementos de la colección
-    Private Nombres As New Stack
+    Private Nombres As New Stack(Of String)
 
     Sub main()
         Dim bandera As Byte = 1

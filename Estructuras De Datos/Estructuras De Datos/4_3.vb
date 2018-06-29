@@ -19,8 +19,7 @@
 
 
     Sub main()
-        Dim NombresAlumnos() As String
-        Dim NotasAlumnos(,) As Single
+
         Dim cantalu, cantnotas As Byte
         Dim MejorNota As Single = 0
 
@@ -28,8 +27,8 @@
         Validar(cantalu, "Cantidad de Alumnos", 40)
         Validar(cantnotas, "Cantidad de Notas", 4)
 
-        ReDim NombresAlumnos(cantalu - 1)
-        ReDim NotasAlumnos(cantalu - 1, cantnotas - 1)
+        Dim NombresAlumnos(cantalu - 1) As String
+        Dim NotasAlumnos(cantalu - 1, cantnotas - 1) As Single
 
         CargarDatos(NombresAlumnos, cantalu, NotasAlumnos)
 

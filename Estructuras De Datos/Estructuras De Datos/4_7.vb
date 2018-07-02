@@ -25,7 +25,8 @@
         Validar(cantalu, "Cantidad de Alumnos", 40)
         Validar(cantnotas, "Cantidad de Notas", 4)
 
-        Dim NombreAlumnos As Collection
+        Dim NombreAlumnos As New ArrayList
+
 
 
         Console.ReadKey()
